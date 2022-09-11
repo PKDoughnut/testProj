@@ -15,7 +15,9 @@ jobs:
       uses: remorses/bump-version@v8
       with:
           version_file: ./VERSION
-    
+      env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+       
     - uses: actions/checkout@v1
     
     - name: Build & Push Image
