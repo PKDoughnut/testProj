@@ -12,11 +12,12 @@ jobs:
 
     steps:
     - name: Bump Versions
-    - uses: remorses/bump-version@v8
+      uses: remorses/bump-version@v8
       with:
           version_file: ./VERSION
     
     - uses: actions/checkout@v1
+    
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "pkdoughnut" --password-stdin
