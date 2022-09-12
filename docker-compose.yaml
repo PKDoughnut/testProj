@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  myservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pkdoughnut/test:latest
