@@ -13,6 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Scan image for vulnerabilities
+      uses: docker://docker.io/aquasec/trivy:0.2.1
+      with:
+         args: --cache-dir /var/lib/trivy --exit-code 1 --no-progress docker.pkg.github.com/pkdoughnut/dev-sec-ops-seed/seed:${{ github.sha }}
+    
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@1.36.0
       env:
