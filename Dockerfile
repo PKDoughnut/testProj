@@ -1,5 +1,5 @@
 FROM python:3 AS base
-COPY Hello_World.py /
+COPY HelloWorld.py /
 
 FROM base AS run
-CMD ["/Hello_World.py"]
+CMD ["/HelloWorld.py"]
