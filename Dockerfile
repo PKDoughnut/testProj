@@ -1,6 +1,6 @@
 FROM python:3
-RUN  mkdir /WORK_REPO
-RUN  cd  /WORK_REPO
-WORKDIR  /WORK_REPO
-ADD HelloWorld.py .
-CMD ["python", "./HelloWorld.py"]
+ADD helloworld.py /
+RUN pip install flask
+RUN pip install flask_restful
+EXPOSE 3333
+CMD [ "python", "./helloworld.py"]
