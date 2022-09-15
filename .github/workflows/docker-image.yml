@@ -22,5 +22,5 @@ jobs:
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "pkdoughnut" --password-stdin
-        docker image build -t helloworld-py:latest .
-        docker push helloworld-py:latest
+        docker image build -t pkdoughnut/test:latest .
+        docker push pkdoughnut/test
