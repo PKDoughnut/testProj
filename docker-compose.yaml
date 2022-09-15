@@ -1,7 +1,7 @@
-version: '3.7'
+version: '3.9'
 services:
-  testDC:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: pkdoughnut/test:latest
+  helloworld:
+    build: .
+    ports:
+      - "3333:3333"
+    image: docker.io/pkdoughnut/test:latest
