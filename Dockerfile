@@ -1,4 +1,4 @@
-FROM Ubuntu 20.04
+FROM alpine:3.15
 ADD helloworld.py /
 RUN pip install flask
 RUN pip install flask_restful
