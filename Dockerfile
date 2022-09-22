@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM python:3.9
 ADD helloworld.py /
 RUN pip install flask
 RUN pip install flask_restful
